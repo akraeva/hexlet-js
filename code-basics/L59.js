@@ -10,5 +10,3 @@ const normalizeUrl = (address) => {
 
 const res = normalizeUrl('google.com') === 'https://google.com' && normalizeUrl('https://ai.fi') === 'https://ai.fi';
 console.log(res);
-
-"sdfsdf"
