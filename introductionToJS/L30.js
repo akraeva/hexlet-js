@@ -1,4 +1,4 @@
-const getLetter = (string, charNumber) => string[charNumber - 1] || '';
+const getLetter = (string, char) => string[char - 1] || '';
 
 const name = 'Hexlet';
 
