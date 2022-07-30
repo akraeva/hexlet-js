@@ -1,6 +1,9 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable no-param-reassign */
+
 const isHappyTicket = (number) => {
   const array = [];
-  number.split('').forEach((elem) => array.push(parseInt(elem))); // почему это работает, когда array - константа?
+  number.split('').forEach((elem) => array.push(parseInt(elem, 10))); // почему это работает, когда array - константа?
 
   const arraySum = (mas) => mas.reduce((elem, sum) => sum += elem);
 
