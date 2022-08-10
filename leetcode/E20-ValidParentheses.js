@@ -7,13 +7,11 @@ const isValid = (s) => {
 
   let str = s;
 
-  while (str.indexOf('()') !== -1
-      || str.indexOf('{}') !== -1
-      || str.indexOf('\[\]') !== -1) {
-    // здесь должно быть нормельно регулярное выражение
+  while (str.includes('()') || str.includes('{}') || str.includes('\[\]')) {
+    // здесь должно быть нормальное регулярное выражение
     str = str.replace('()', '').replace('{}', '').replace('\[\]', '');
   }
-  return str.length === 0;
+  return !str;
 };
 
 /* Через массив - медленно
@@ -37,8 +35,7 @@ const isValid = (s) => {
     if (replace) str = str.filter((x) => x);
   }
 
-  if (str.length === 0) return true;
-  return false;
+  return !str;
 }
 */
 
@@ -66,8 +63,7 @@ const isValid = (s) => {
     }
     str = res;
   }
-  if (str.length === 0) return true;
-  return false;
+  return !str
 };
 */
 
